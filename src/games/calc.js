@@ -10,8 +10,8 @@ const rules = 'What is the result of the expression?';
 
 const questionAndAnswer = () => {
   const randomOperator = getRandomOperator();
-  const randomNubmer1 = getRandomNumber();
-  const randomNubmer2 = getRandomNumber();
+  const randomNubmer1 = getRandomNumber(100);
+  const randomNubmer2 = getRandomNumber(100);
   const question = `${randomNubmer1} ${randomOperator} ${randomNubmer2}`;
   let correctAnswer;
   switch (randomOperator) {
