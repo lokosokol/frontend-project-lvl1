@@ -12,7 +12,7 @@ const brainGames = (rules, questionAndAnswer) => {
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer !== correctAnswer) {
       return console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${name}!`
+        `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${name}!`,
       );
     }
     console.log('Correct!');

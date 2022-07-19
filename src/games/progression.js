@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { getRandomNumber } from '../random.js';
+import getRandomNumber from '../random.js';
 
 const rules = 'What number is missing in the progression?';
 

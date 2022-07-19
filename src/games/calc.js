@@ -1,4 +1,4 @@
-import { getRandomNumber } from '../random.js';
+import getRandomNumber from '../random.js';
 
 const getRandomOperator = () => {
   const maxOperator = 3;

@@ -1,4 +1,4 @@
-import { getRandomNumber } from '../random.js';
+import getRandomNumber from '../random.js';
 
 const rules = 'Find the greatest common divisor of given numbers.';
 
@@ -13,7 +13,7 @@ const questionAndAnswer = () => {
     return a;
   };
   const correctAnswer = String(
-    greatestCommonDivisor(randomNubmer1, randomNubmer2)
+    greatestCommonDivisor(randomNubmer1, randomNubmer2),
   );
 
   return [question, correctAnswer];
