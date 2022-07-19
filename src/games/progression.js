@@ -13,10 +13,10 @@ const questionAndAnswer = () => {
     sequence.push(term);
     term += randomDifference;
   }
-  let i = getRandomNumber(randomSequenceLength);
+  const i = getRandomNumber(randomSequenceLength);
   const correctAnswer = String(sequence[i]);
   sequence[i] = '..';
-  const question = `Question: ${sequence.join(' ')}`;
+  const question = sequence.join(' ');
 
   return [question, correctAnswer];
 };

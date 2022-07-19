@@ -7,7 +7,7 @@ const brainGames = (rules, questionAndAnswer) => {
   console.log(rules);
   for (let i = 0; i < 3; i += 1) {
     const [question, correctAnswer] = questionAndAnswer();
-    console.log(question);
+    console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer !== correctAnswer) {
       return console.log(
