@@ -18,7 +18,7 @@ const brainGames = (rules, getGameData) => {
     }
     console.log('Correct!');
   }
-  console.log(`Congratulations, ${name}!`);
+  return console.log(`Congratulations, ${name}!`);
 };
 
 export default brainGames;
