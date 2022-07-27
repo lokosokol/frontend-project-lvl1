@@ -1,9 +1,9 @@
 import getRandomNumber from '../helpers.js';
 import brainGames from '../index.js';
 
-const operators = ['+', '-', '*'];
+const rules = 'What is the result of the expression?';
 
-const getRandomOperator = () => operators[getRandomNumber(operators.length)];
+const operators = ['+', '-', '*'];
 
 const getExpression = (operator, number1, number2) => {
   switch (operator) {
@@ -16,10 +16,8 @@ const getExpression = (operator, number1, number2) => {
   }
 };
 
-const rules = 'What is the result of the expression?';
-
 const getGameData = () => {
-  const randomOperator = getRandomOperator();
+  const randomOperator = operators[getRandomNumber(operators.length)];
   const randomNubmer1 = getRandomNumber(100);
   const randomNubmer2 = getRandomNumber(100);
   const question = `${randomNubmer1} ${randomOperator} ${randomNubmer2}`;

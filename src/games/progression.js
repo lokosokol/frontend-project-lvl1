@@ -14,13 +14,6 @@ const getSequence = (sequenceLength, sequenceDifference, firstTerm) => {
   return sequence;
 };
 
-const hideNumber = (sequence, termNumber) => {
-  const newSequence = [...sequence];
-  newSequence[termNumber] = '..';
-
-  return newSequence.join(' ');
-};
-
 const getGameData = () => {
   const randomFirstTerm = getRandomNumber(100);
   const randomSequenceLength = getRandomNumber(5, 11);
@@ -31,8 +24,9 @@ const getGameData = () => {
     randomFirstTerm,
   );
   const i = getRandomNumber(randomSequenceLength);
-  const question = hideNumber(sequence, i);
   const correctAnswer = String(sequence[i]);
+  sequence[i] = '..';
+  const question = sequence.join(' ');
 
   return [question, correctAnswer];
 };
