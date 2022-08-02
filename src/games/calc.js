@@ -11,8 +11,10 @@ const getExpression = (operator, number1, number2) => {
       return String(number1 + number2);
     case '-':
       return String(number1 - number2);
-    default:
+    case '*':
       return String(number1 * number2);
+    default:
+      throw new Error('Wrong operator');
   }
 };
 
@@ -21,11 +23,7 @@ const getGameData = () => {
   const randomNubmer1 = getRandomNumber(100);
   const randomNubmer2 = getRandomNumber(100);
   const question = `${randomNubmer1} ${randomOperator} ${randomNubmer2}`;
-  const correctAnswer = getExpression(
-    randomOperator,
-    randomNubmer1,
-    randomNubmer2,
-  );
+  const correctAnswer = getExpression(randomOperator, randomNubmer1, randomNubmer2);
 
   return [question, correctAnswer];
 };
